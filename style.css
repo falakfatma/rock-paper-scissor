@@ -1,0 +1,76 @@
+html {
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-family: 'Comfortaa', cursive;
+
+}
+.container{
+  background: lightblue url("https://cdn.pixabay.com/photo/2019/04/10/11/56/watercolor-4116932_960_720.png") no-repeat fixed center;
+  height: 100vh;
+  width: 100%;
+  margin: 0px;
+/*   background: #2f0755; */
+}
+.heading{
+  text-align: center;
+  font-size: 2.5rem;
+}
+.gaming-boxContainer{
+  display: flex;
+}
+.gaming-box{
+    border: 2px solid;
+    border-radius: 30px;
+    width: 8rem;
+    height: 6rem;
+    padding: 1rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 8rem;
+    font-size: xx-large;
+    cursor: pointer;
+    position: relative;
+    transition: height 1s , top 1s ;
+
+}
+.gaming-box:hover{
+    height: 7rem;
+    top: 1rem;
+}
+.turn{
+  font-weight: 800;
+  font-size: larger;
+  text-align: center;
+  margin-top: 2rem;
+}
+ img{
+  width:90%;
+  height: 90%;
+
+}
+.score{
+  display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 1rem;
+    font-size: larger;
+}
+.hide{
+  display: none;
+}
+.row{
+  display:flex;
+  justify-content:space-around;
+}
+/* .show{
+  display: flex;
+} */
+.WhatPicked{
+  height: 100%;
+  width: 100%;
+}
+.ComputerPicked, .youPicked{
+  width:9rem;
+  height: 8rem;
+}
