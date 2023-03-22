@@ -74,7 +74,7 @@ html {
   width:9rem;
   height: 8rem;
 }
-.reset{
+#reset{
   padding: 1.5rem;
   margin: 2px;
   font-size: larger;
