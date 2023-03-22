@@ -74,3 +74,10 @@ html {
   width:9rem;
   height: 8rem;
 }
+.reset{
+  padding: 1.5rem;
+  margin: 2px;
+  font-size: larger;
+  border-radius: 1rem;
+  background: transparent;
+}

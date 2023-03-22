@@ -1,5 +1,10 @@
-// let container = document.querySelector(`.container`)
-// let gamingItem = document.querySelectorAll(`.gaming-box`)
+let container = document.querySelector(`.container`)
+let Items = document.querySelectorAll('.gaming-box')
+let gamingCon = document.querySelector(`.gaming-boxContainer`);
+let scissor = document.getElementById(`scissor`);
+let paper = document.getElementById(`paper`);
+let rock = document.getElementById(`rock`);
+let Result_Container = document.querySelector(`.Result_Container`);
 // let ele = document.createElement('div')
 // ele.classList = "turn"
 // let turn = `Turn : Your turn`
@@ -20,3 +25,16 @@
 // return e
 // })
 // console.log(item)
+
+// On click -- ROck Paper Scissor
+
+// let Item = document.addEventListener(())
+document.querySelectorAll('.gaming-box').forEach(item => {
+  item.addEventListener('click', event => {
+    //handle click
+   gamingCon.classList.add('hide')
+    Result_Container.classList.remove('hide')
+  })
+})
+
+console.log(paper)
