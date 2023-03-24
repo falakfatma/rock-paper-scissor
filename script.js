@@ -33,61 +33,98 @@ function getComputerChoice() {
   return choice[RandomNum]
 }
 function game(userChoice) {
-  if (userChoice + getComputerChoice() == 'pr' || userChoice + getComputerChoice() == 'sp' || userChoice + getComputerChoice() == 'rs') {
-    console.log(userChoice + getComputerChoice());
+  if (userChoice + getComputerChoice() == 'pr') {
+    console.log("user "+ userChoice + "com "+ getComputerChoice());
     answer.innerHTML = `you win`;
     score.innerHTML = Scores++;
+      ComputerPicked.innerHTML =
+    `<img src="icons/8530659_hand_rock_icon.png" alt="rock">`;
   }
-  else if (userChoice + getComputerChoice() == 'rp' || userChoice + getComputerChoice() == 'ps' || userChoice + getComputerChoice() == 'rs') {
-
+  else if(userChoice + getComputerChoice() == 'sp'){
+    console.log(userChoice + getComputerChoice());
+    answer.innerHTML = `you win`;
+      ComputerPicked.innerHTML =
+    `<img src="icons/8664932_hand_gesture_icon.png" alt="paper">`;
+    score.innerHTML = Scores++;
+  }
+  else if(userChoice + getComputerChoice() == 'rs'){
+    console.log(userChoice + getComputerChoice());
+    answer.innerHTML = `you win`;
+     ComputerPicked.innerHTML =
+    `<img src="icons/8664885_hand_peace_icon.png" alt="scissor">`;
+    score.innerHTML = Scores++;
+  }
+  else if(userChoice + getComputerChoice() == 'sr'){
+    console.log(userChoice + getComputerChoice());
+    answer.innerHTML = `you win`;
+    ComputerPicked.innerHTML =
+    `<img src="icons/8530659_hand_rock_icon.png" alt="rock">`;
+    score.innerHTML = Scores++;
+  }
+  else if (userChoice + getComputerChoice() == 'rp') {
+  ComputerPicked.innerHTML =
+    `<img src="icons/8664932_hand_gesture_icon.png" alt="paper">`;
     console.log(userChoice + getComputerChoice());
     answer.innerHTML = `Computer win`;
   }
-  else if (userChoice + getComputerChoice() == 'pp' || userChoice + getComputerChoice() == 'ss' || userChoice + getComputerChoice() == 'rr') {
+  else if ( userChoice + getComputerChoice() == 'ps') {
 
     console.log(userChoice + getComputerChoice());
+     ComputerPicked.innerHTML =
+    `<img src="icons/8664885_hand_peace_icon.png" alt="scissor">`;
+    answer.innerHTML = `Computer win`;
+  }
+  else if (userChoice + getComputerChoice() == 'rs') {
 
+    console.log(userChoice + getComputerChoice());
+     ComputerPicked.innerHTML =
+    `<img src="icons/8664885_hand_peace_icon.png" alt="scissor">`;
+    answer.innerHTML = `Computer win`;
+  }
+  else if (userChoice + getComputerChoice() == 'pp') {
+
+    console.log(userChoice + getComputerChoice());
+  ComputerPicked.innerHTML =
+    `<img src="icons/8664932_hand_gesture_icon.png" alt="paper">`;
+    answer.innerHTML = `Tie Game`
+  }
+  else if ( userChoice + getComputerChoice() == 'ss') {
+
+    console.log(userChoice + getComputerChoice());
+ ComputerPicked.innerHTML =
+    `<img src="icons/8664885_hand_peace_icon.png" alt="scissor">`;
+    answer.innerHTML = `Tie Game`
+  }
+  else if (userChoice + getComputerChoice() == 'rr') {
+
+    console.log(userChoice + getComputerChoice());
+  ComputerPicked.innerHTML =
+    `<img src="icons/8530659_hand_rock_icon.png" alt="rock">`;
     answer.innerHTML = `Tie Game`
   };
 };
-function ComputerImg(){
-  if (getComputerChoice() == 'r') {
-  ComputerPicked.innerHTML =
-    `<img src="icons/8530659_hand_rock_icon.png" alt="rock">`;
-    console.log(`your com choice = ${getComputerChoice()}`);
-}
-else if (getComputerChoice() == 's') {
-  ComputerPicked.innerHTML =
-    `<img src="icons/8664885_hand_peace_icon.png" alt="scissor">`;
-  console.log(`your com choice = ${getComputerChoice()}`);
-}
-else if (getComputerChoice() == 'p') {
+  
 
-  ComputerPicked.innerHTML =
-    `<img src="icons/8664932_hand_gesture_icon.png" alt="paper">`;
-    console.log(`your com choice = ${getComputerChoice()}`);
-}
-};
 
   
 
 function main() {
   scissor.addEventListener('click', () => {
+  
     game('s')
-  ComputerImg();
     youPicked.innerHTML =
       `<img src="icons/8664885_hand_peace_icon.png" alt="scissor">`;
   });
   rock.addEventListener('click', () => {
+  
     game('r');
-  ComputerImg();
     
     youPicked.innerHTML =
       `<img src="icons/8530659_hand_rock_icon.png" alt="rock">`;
   });
   paper.addEventListener('click', () => {
+  
     game('p');
-  ComputerImg();
     
     youPicked.innerHTML =
       `<img src="icons/8664932_hand_gesture_icon.png" alt="paper">`;
@@ -115,6 +152,3 @@ reset.addEventListener('click', () => {
   gamingCon.classList.remove('hide')
   Result_Container.classList.add('hide')
 })
-// setInterval(()=>{
-//   main()
-// },500)
